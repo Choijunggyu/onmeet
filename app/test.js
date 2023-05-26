@@ -1,6 +1,8 @@
+'use client';
+
 import './materialize.css'
 
-export default function Home() {
+export default function home() {
   return (
     <div>
       <a className="waves-effect waves-light btn">button</a>
