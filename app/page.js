@@ -1,11 +1,12 @@
+'use client' //컴포넌트 사용할 때 작성
+import Testcomponent from './components/Testcomponent'
 import './materialize.css'
+
 
 export default function Home() {
   return (
     <div>
-      <a className="waves-effect waves-light btn">button</a>
-      <a className="waves-effect waves-light btn"><i className="material-icons left">cloud</i>button</a>
-      <a className="waves-effect waves-light btn"><i className="material-icons right">cloud</i>button</a>
+      <Testcomponent></Testcomponent>
     </div>
   )
 }

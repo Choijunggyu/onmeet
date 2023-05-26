@@ -7,7 +7,7 @@ export default function Home(){
     const [resData, setResData] = useState([]);
     useEffect(() => {
         async function getData(){
-            const fetchurl = `http://localhost:3000/api/route`;
+            const fetchurl = `http://localhost:3000/dbtest/getdb`;
             const response = await fetch(fetchurl);
             const res = await response.json()
             console.log(res);
@@ -19,6 +19,7 @@ export default function Home(){
     return(
         <div>
             {resData}
+            db테스트 페이지
         </div>
     )
 }
