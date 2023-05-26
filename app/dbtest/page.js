@@ -1,21 +1,17 @@
-'use client' //클라이언트 사이드에서 사용
 
-import {useState, useEffect} from "react"
-
-
-export default function Home(){
-    const [resData, setResData] = useState([]);
-    useEffect(() => {
-        async function getData(){
-            const fetchurl = `http://localhost:3000/dbtest/getdb`;
-            const response = await fetch(fetchurl);
-            const res = await response.json()
-            console.log(res);
-            setResData(res.results)
+ async function getData(){
+    const config = {
+        headers: {
+            'Accept': 'application/json'
         }
-        getData();
-    },[])
+    }
 
+    const response = await fetch('http://localhost:3000/api/getdb',);
+    return response.json()
+}
+
+export default async function Home(){
+    const resData = await getData()
     return(
         <div>
             {resData}

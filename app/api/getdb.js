@@ -16,7 +16,7 @@ export default async function handler(req,res){
         const [data] = await dbconnection.execute(query,values)
         dbconnection.end();
         console.log(data);
-        res.status(200).json({ results: data})
+        res.status(200).json({results: data})
     }catch(error){
         res.status(500).json({error: error.message})
     }
