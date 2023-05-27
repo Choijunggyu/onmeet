@@ -7,5 +7,5 @@
 ## 사용 언어 및 기술
  - Next.js
  - Metarialize_css
- - MySQL
+ - Prisma
 
