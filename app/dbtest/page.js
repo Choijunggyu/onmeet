@@ -1,14 +1,12 @@
-import { PrismaClient } from "@prisma/client";
+import getdata from '../actions/getdata'
+import insertdata from '../actions/insertdata'
+import '../materialize.css'
+import Submit from './Submit'
 
-const prisma = new PrismaClient()
+export default async function Page(){
+    // insertdata('rrr','0987','jung','rrr@naver.com') 서버사이드에서 부르면 값은 들어가짐
 
-export default async function Home(){
-    const data = await prisma.User.findMany(); //prisma.테이블이름.찾아오기
     return(
-        <div>
-            <ul>
-                {data.map((data) => (<li key={data.id}>{data.name}</li>))}
-            </ul>
-        </div>
+        <Submit/>
     )
 }
