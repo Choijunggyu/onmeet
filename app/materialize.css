@@ -3,6 +3,50 @@
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
+ .mexavas-large-zize{
+  font-size: large  !important;
+ }
+ .mexavas-text-blue{
+  color:#61AFEF   !important;
+
+ }
+ .mexavas-text-magenta {
+  color:#C678DD  !important;
+}
+ .mexavas-text-white {
+  color:#ABB2BF !important;
+}
+body{
+  background-color: black !important;
+}
+
+ .mexavas-cyan {
+  background-color: #56b6c2 !important;
+}
+ 
+ .mexavas-white {
+  background-color: #ABB2BF !important;
+}
+.mexavas-black{
+  background-color: #000000 !important;
+}
+
+ .mexavas-dark {
+  background-color: #282C34 !important;
+}
+
+ .mexavas-magenta {
+  background-color: #C678DD !important;
+}
+
+ .mexavas-green {
+  background-color: #98C379 !important;
+}
+
+ .mexavas-blue {
+  background-color: #61AFEF !important;
+}
+
 .materialize-red {
   background-color: #e51c23 !important;
 }
@@ -8486,10 +8530,19 @@ input[type=range]::-ms-thumb {
   visibility: visible;
   -webkit-animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
           animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
-  -webkit-transition: opacity .3s, visibility 0s 1s, -webkit-transform .3s;
-  transition: opacity .3s, visibility 0s 1s, -webkit-transform .3s;
-  transition: opacity .3s, transform .3s, visibility 0s 1s;
-  transition: opacity .3s, transform .3s, visibility 0s 1s, -webkit-transform .3s;
+  -webkit-transition: opacity .3s,
+ visibility 0s 1s,
+ -webkit-transform .3s;
+  transition: opacity .3s,
+ visibility 0s 1s,
+ -webkit-transform .3s;
+  transition: opacity .3s,
+ transform .3s,
+ visibility 0s 1s;
+  transition: opacity .3s,
+ transform .3s,
+ visibility 0s 1s,
+ -webkit-transform .3s;
 }
 
 .tap-target {
@@ -8542,10 +8595,19 @@ input[type=range]::-ms-thumb {
 
 .tap-target-wave::after {
   visibility: hidden;
-  -webkit-transition: opacity .3s, visibility 0s, -webkit-transform .3s;
-  transition: opacity .3s, visibility 0s, -webkit-transform .3s;
-  transition: opacity .3s, transform .3s, visibility 0s;
-  transition: opacity .3s, transform .3s, visibility 0s, -webkit-transform .3s;
+  -webkit-transition: opacity .3s,
+ visibility 0s,
+ -webkit-transform .3s;
+  transition: opacity .3s,
+ visibility 0s,
+ -webkit-transform .3s;
+  transition: opacity .3s,
+ transform .3s,
+ visibility 0s;
+  transition: opacity .3s,
+ transform .3s,
+ visibility 0s,
+ -webkit-transform .3s;
   z-index: -1;
 }
 
