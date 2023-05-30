@@ -1,6 +1,6 @@
 import '../materialize.css'
 import getdata from '../actions/getdata';
-import ContectFrom from './ContectForm';
+import SearchId from './SearchId';
 
 export default async function page(){
 
@@ -8,7 +8,7 @@ export default async function page(){
 
     return (
         <div className='container'>
-            <ContectFrom data = {data}/>
+            <SearchId data = {data}/>
         </div> 
     );
 };
