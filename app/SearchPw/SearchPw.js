@@ -31,12 +31,14 @@ export default function SearchPw(props){
     }
 
     return(
-        <form onSubmit={handleSubmit}>
-            <input type='text' name='id' id="id"/>
-            <label htmlFor="id">id를 입력해주세요</label>
-            <input type='text' name='email' id="email"/>
-            <label htmlFor="email">email를 입력해주세요</label><br></br>
-            <button className="waves-effect waves-light btn" type='submit'>확인</button>
-        </form>
+        <div className="row section">
+            <form onSubmit={handleSubmit} className="col s6 offset-s3">
+                <input className="mexavas-text-white" type='text' name='id' id="id"/>
+                <label htmlFor="id">id를 입력해주세요</label>
+                <input className="mexavas-text-white" type='text' name='email' id="email"/>
+                <label htmlFor="email">email를 입력해주세요</label><br/>
+                <button className="mexavas-blue waves-effect waves-light btn" type='submit'>확인</button>
+            </form>
+        </div>
     )
 }
