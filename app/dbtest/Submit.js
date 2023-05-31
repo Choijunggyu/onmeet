@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from "react";
-import { Insert } from './Insert';
+import { Insert } from '../actions/Insert';
 
 
 export default function Submit(){
