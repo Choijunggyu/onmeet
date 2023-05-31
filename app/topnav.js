@@ -2,7 +2,7 @@
 import './materialize.css'
 import Link from 'next/link';
 
-export default function SideNav() {
+export default function TopNav() {
   return (
     <div>
          <nav>
