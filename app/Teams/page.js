@@ -1,7 +1,7 @@
 'use client' //컴포넌트 사용할 때 작성
 import Link from 'next/link';
 import './../materialize.css'
-import SideNav from '../topnav';
+import TopNav from '../topnav';
 
 export default function SignUp() {
   return (
