@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import Select from 'react-select';
 
 let grade = [
@@ -11,64 +11,31 @@ let grade = [
 
 export const page = () => {
 
-  const [selectValue, setSelectValue] = useState('');
-  const selectInputRef = useRef(null);
-
-  const onClearSelect = () => {
-    if (selectInputRef.current) {
-      selectInputRef.current.clearValue();
-    }
-  }
+  const [setSelectValue] = useState('');
 
   return (
     <div>
-      <div>이름</div>
-      <div>아이디</div>
-      <div>비밀번호</div>
-      <div>이메일</div>
       <div>
-        <Select 
-          ref={selectInputRef}
-          onChange={(e) => {
-            if (e) {
-              setSelectValue(e.value);
-            } else {
-              setSelectValue("");
-            }
-          }}
+        <h4>이름</h4>
+        <h4>아이디</h4>
+        <h4>비밀번호</h4>
+        <h4>이메일</h4>
+        <Select id="major"
+          onChange={(e) => {setSelectValue(e.value); }}
           options={grade}
           placeholder="전공"
         />
-      </div>
-      <div id="info">
         <Select id="school"
-          ref={selectInputRef}
-          onChange={(e) => {
-            if (e) {
-              setSelectValue(e.value);
-            } else {
-              setSelectValue("");
-            }
-          }}
+          onChange={(e) => {setSelectValue(e.value); }}
           options={grade}
           placeholder="학교"
         />
         <Select id="grade"
-          ref={selectInputRef}
-          onChange={(e) => {
-            if (e) {
-              setSelectValue(e.value);
-            } else {
-              setSelectValue("");
-            }
-          }}
+          onChange={(e) => {setSelectValue(e.value); }}
           options={grade}
           placeholder="학년"
-        />학년
+        />
       </div>
-      <button onClick={() => onClearSelect()}>
-        초기화
-      </button>
       <button>회원 정보 수정</button>
     </div>
   );
