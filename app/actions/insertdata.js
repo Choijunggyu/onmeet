@@ -1,13 +1,16 @@
 import prisma from '../libs/prismadb'
 
-export default async function insertdata(id, password,name, email){
+export default async function insertdata(id, password,name, email, major, school, grade){
     try{
-        const create = await prisma.user.create({
+        await prisma.user.create({
             data: {
                 id: id,
                 password: password,
                 name: name,
-                email: email
+                email: email,
+                major: major,
+                school: school,
+                grade: grade
             }
         })
     } catch(error){
