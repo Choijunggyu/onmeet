@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Select from 'react-select';
 
 let grade = [
@@ -12,33 +12,62 @@ let grade = [
 export const page = () => {
 
   const [setSelectValue] = useState('');
+  const selectInputRef = useRef(null);
 
-  return (
-    <div>
-      <div>
-        <h4>이름</h4>
-        <h4>아이디</h4>
-        <h4>비밀번호</h4>
-        <h4>이메일</h4>
-        <Select id="major"
-          onChange={(e) => {setSelectValue(e.value); }}
-          options={grade}
-          placeholder="전공"
-        />
-        <Select id="school"
-          onChange={(e) => {setSelectValue(e.value); }}
-          options={grade}
-          placeholder="학교"
-        />
-        <Select id="grade"
-          onChange={(e) => {setSelectValue(e.value); }}
-          options={grade}
-          placeholder="학년"
-        />
-      </div>
-      <button>회원 정보 수정</button>
-    </div>
-  );
+  const onClearSelect = () => {
+    if (selectInputRef.current) {
+      selectInputRef.current.clearValue();
+    }
+  }
+
+      return (
+        <div>
+            <h4>이름</h4>
+            <h4>아이디</h4>
+            <h4>비밀번호</h4>
+            <h4>이메일</h4>
+            <Select id="major"
+              ref={selectInputRef}
+              onChange={(e) => {
+                if (e) {
+                  setSelectValue(e.value);
+                } else {
+                  setSelectValue("");
+                }
+              }}
+              options={grade}
+              placeholder="학년"
+            />
+            <Select id="school"
+              ref={selectInputRef}
+              onChange={(e) => {
+                if (e) {
+                  setSelectValue(e.value);
+                } else {
+                  setSelectValue("");
+                }
+              }}
+              options={grade}
+              placeholder="학년"
+            />
+            <Select id="grade"
+              ref={selectInputRef}
+              onChange={(e) => {
+                if (e) {
+                  setSelectValue(e.value);
+                } else {
+                  setSelectValue("");
+                }
+              }}
+              options={grade}
+              placeholder="학년"
+            />학년
+          <button onClick={() => onClearSelect()}>
+            초기화
+          </button>
+          <button>회원 정보 수정</button>
+        </div>
+      );
 }
 
 export default page;
