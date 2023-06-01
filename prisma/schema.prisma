@@ -16,5 +16,8 @@ model User {
   password String
   name String
   email String @unique
+  major String
+  school String
+  grade Int
   createtime DateTime @default(now())
 }
