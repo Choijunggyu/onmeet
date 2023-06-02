@@ -17,5 +17,3 @@ export default async function InsertUserData(id, password,name, email, major, sc
         console.log(error)
     }
 }
-
-export default async function InsertTeamData(name,leaderId,)

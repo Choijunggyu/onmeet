@@ -18,7 +18,7 @@ export default function TopNav() {
             <Link  className="mexavas-text-white mexavas-large-zize "href="/Teams">팀채팅</Link>
             </li>
             <li>
-            <Link className="mexavas-text-magenta mexavas-large-zize "href="/users">회원가입</Link>
+            <Link className="mexavas-text-magenta mexavas-large-zize "href="/users">가입하세요</Link>
             </li>
           </ul>
         </div>
