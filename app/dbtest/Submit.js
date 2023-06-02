@@ -34,18 +34,20 @@ export default function Submit(){
             email: String(event.target.email.value),
             major: String(event.target.major.value),
             school: String(event.target.school.value),
-            grade: parseInt(data.grade)
+            grade: parseInt(event.target.grade.value)
         })
 
     }
 
     useEffect(()=>{
         Insert(data)
-        console.log(data)
+        if(data.grade !== null){
+            window.alert('회원가입 완료')
+        }
     },[data])
 
     return(
-        <div className="container">
+        <div className="container section">
         <form className="row" onSubmit={handleSubmit} id="register">
             <input className="mexavas-text-white" type='text' name='id' id="id"/>
             <label  htmlFor="id">ID를 입력해주세요</label>
@@ -59,7 +61,12 @@ export default function Submit(){
             <label htmlFor="email">전공을 입력해주세요</label>
             <input className="mexavas-text-white" type='text' name='school' id="school"/>
             <label htmlFor="school">학교를 입력해주세요</label>
-            {/* <Select options={grade} onChange={(e)=>setData({grade: e.value})} placeholder="학년"/><br/> 오류 */}
+            <select name="grade" className="browser-default">
+                <option value="1">1학년</option>
+                <option value="2">2학년</option>
+                <option value="3">3학년</option>
+                <option value="3">4학년</option>
+            </select>
             <button className="mexavas-blue waves-effect waves-light btn" type='submit'>회원가입</button>
         </form>
         </div>
