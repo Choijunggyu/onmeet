@@ -6,19 +6,18 @@ export default function Login(props) {
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
 
+  const data = props.data; //가져온 props user db데이터  data.id 유저id data.password 유저비밀번호
+
   useEffect(() => {
-    const data = props.data();
     setId(data.id || "");
-    setPw(data.pw || "");
+    setPw(data.password || "");
   }, []);
 
   function comData(event) {
     event.preventDefault();
 
-    const data = props.data();
-
     if (data.id === id) {
-      if (data.pw === pw) {
+      if (data.password === pw) {
         window.alert(`로그인 성공`);
       } else {
         window.alert(`비밀번호가 일치하지 않습니다. 다시 입력해주세요`);

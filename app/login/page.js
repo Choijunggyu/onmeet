@@ -1,11 +1,12 @@
-import getdata from '../actions/getdata'
-import insertdata from '../actions/insertdata'
+import GetUserData from '../actions/getdata'
 import '../materialize.css'
 import Login from './Login'
 
 export default async function Page(){
 
+    const data = await GetUserData()
+
     return(
-        <Login/>
+        <Login data={data}/>
     )
 }
