@@ -3,6 +3,10 @@
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
+.mexavas-div{
+  display:flex !important;
+  justify-content:center !important;
+}
  .mexavas-large-zize{
   font-size: large  !important;
  }
@@ -16,10 +20,6 @@
  .mexavas-text-white {
   color:#ABB2BF !important;
 }
-body{
-  background-color: white !important;
-}
-
  .mexavas-cyan {
   background-color: #56b6c2 !important;
 }
