@@ -1,11 +1,11 @@
 import '../materialize.css'
-import getdata from '../actions/getdata';
 import SearchPw from './SearchPw';
 import TopNav from '../topnav';
+import GetUserData from '../actions/getdata';
 
 export default async function page(){
 
-    const data = await getdata()
+    const data = await GetUserData()
 
     return (
         <>

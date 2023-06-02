@@ -20,4 +20,13 @@ model User {
   school String
   grade Int
   createtime DateTime @default(now())
+  team Team[]
+}
+
+model Team {
+  team_id Int @id @default(autoincrement())
+  name String
+  leader User @relation(fields: [leaderId], references: [user_num])
+  leaderId Int
+  team_type String
 }

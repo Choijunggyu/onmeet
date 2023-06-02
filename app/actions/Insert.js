@@ -1,7 +1,7 @@
 'use server'
 
-import insertdata from "./insertdata"
+import InsertUserData from "./insertdata"
 
-export async function Insert(data){
-    insertdata(data.id, data.pw, data.name, data.email, data.major, data.school, data.grade)
+export async function InsertUser(data){
+    InsertUserData(data.id, data.pw, data.name, data.email, data.major, data.school, data.grade)
 }

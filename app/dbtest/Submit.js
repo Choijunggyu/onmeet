@@ -1,8 +1,7 @@
 'use client'
 
 import { useState, useEffect } from "react";
-import { Insert } from '../actions/Insert';
-import Select from 'react-select';
+import { InsertUser } from '../actions/Insert';
 
 let grade = [
     { value:"1", label:"1" },
@@ -40,7 +39,7 @@ export default function Submit(){
     }
 
     useEffect(()=>{
-        Insert(data)
+        InsertUser(data)
         if(data.grade !== null){
             window.alert('회원가입 완료')
         }
