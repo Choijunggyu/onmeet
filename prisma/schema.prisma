@@ -29,4 +29,5 @@ model Team {
   leader User @relation(fields: [leaderId], references: [id])
   leaderId String
   team_type String
+  createtime DateTime @default(now())
 }

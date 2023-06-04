@@ -69,7 +69,7 @@ export default function SignUp() {
             <h1 className="center-align mexavas-text-white mexavas-div">네, 가입하세요</h1>
             <div className="  container section  col s12">
                 <span>         <Image
-      src="/onmeet1.png"
+      src="/public/onmeet1.png"
       width={400}
       height={400}
       alt="Picture of the author"

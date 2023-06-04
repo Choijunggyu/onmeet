@@ -17,3 +17,17 @@ export default async function InsertUserData(id, password,name, email, major, sc
         console.log(error)
     }
 }
+
+export async function InsertTeamData(name, leaderId, team_type){
+    try{
+        await prisma.Team.create({
+            data: {
+                name,
+                leaderId,
+                team_type
+            }
+        })
+    } catch(error){
+        console.log(error)
+    }
+}
