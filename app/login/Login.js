@@ -9,13 +9,14 @@ export default function Login(props) {
   const data = props.data; //가져온 props user db데이터  data.id 유저id data.password 유저비밀번호
 
   useEffect(() => {
-    setId(data.id || "");
-    setPw(data.password || "");
+    setId(data.id || ""); // 부모 컴포넌트로부터 전달된 id값
+    setPw(data.password || ""); //전달된 pw값
   }, []);
 
   function comData(event) {
     event.preventDefault();
 
+    //로그인 처리
     if (data.id === id) {
       if (data.password === pw) {
         window.alert(`로그인 성공`);
@@ -25,10 +26,17 @@ export default function Login(props) {
     } else {
       window.alert(`아이디가 일치하지 않습니다. 다시 입력해주세요.`);
     }
+
+    //로그인 성공한 경우 세션 스토리지에 정보 저장
+    sessionStorage.setItem('id', id);
+    sessionStorage.setItem('password', pw);
+
+    //페이지 이동..?
   }
 
   return (
     <>
+      <h2>Login</h2>
       <form onSubmit={comData}>
         <label htmlFor='id'>ID: </label>
         <input type='text' name='id' id='id' value={id} onChange={(e) => setId(e.target.value)} />
