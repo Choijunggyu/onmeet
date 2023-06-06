@@ -8,11 +8,11 @@ import MyPage from './MyPage';
 
 export default function page() {
 
-  const [ isLogin, setIsLogin ] = useState();
+  const [ isLogin, setIsLogin ] = useState(false);
 
   useEffect(() => {
       if (sessionStorage.getItem('id') === null) {
-          setIsLogin(false);
+        
       } else {
           setIsLogin(true);
       }
