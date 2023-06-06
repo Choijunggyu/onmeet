@@ -21,6 +21,8 @@ model User {
   grade Int
   createtime DateTime @default(now())
   team Team[]
+  member Member[]
+
 }
 
 model Team {
@@ -29,5 +31,16 @@ model Team {
   leader User @relation(fields: [leaderId], references: [id])
   leaderId String
   team_type String
+  createtime DateTime @default(now())
+  member Member[]
+}
+
+model Member{
+  id Int @id @default(autoincrement())
+  user User @relation(fields: [uid], references: [id])
+  uid String
+  team Team @relation(fields: [tid], references: [team_id])
+  tid Int
+  current Boolean @default(true)
   createtime DateTime @default(now())
 }
