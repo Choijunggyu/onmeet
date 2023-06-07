@@ -1,6 +1,6 @@
 'use server'
 
-import {InsertUserData, InsertTeamData} from "./insertdata"
+import {InsertUserData, InsertTeamData, InsertMemberData} from "./insertdata"
 
 export async function InsertUser(data){
     InsertUserData(data.id, data.pw, data.name, data.email, data.major, data.school, data.grade)
