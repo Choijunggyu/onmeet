@@ -8,6 +8,7 @@ export default function TeamRegister(){
         leaderId: null,
         type: '',
         goal: '',
+        check: false
     })
     
     async function handleSubmit(event){
@@ -17,7 +18,8 @@ export default function TeamRegister(){
             name: String(event.target.name.value),
             leaderId: sessionStorage.getItem("id"),
             type: String(event.target.type.value),
-            goal: String(event.target.goal.value)
+            goal: String(event.target.goal.value),
+            check: event.target.check.value
         })
     }
 
@@ -25,7 +27,7 @@ export default function TeamRegister(){
         InsertTeam(data)
         if(data.leaderId !== null){
             window.alert('팀생성 완료')
-        }
+        }   
     },[data])
 
     return(
@@ -41,6 +43,12 @@ export default function TeamRegister(){
                     <option value="3">type3</option>    
                     <option value="3">type4</option>
                 </select><br/>
+                <p>
+                    <label>
+                        <input type="checkbox" name="check" value={true}/>
+                        <span>신청검사여부</span>
+                    </label>
+                </p>
                 <label htmlFor="goal">팀목표와 간단한 소개를 입력해주세요</label>
                 <textarea id="goal" className="materialize-textarea mexavas-text-white"></textarea>
                 <button className="mexavas-blue waves-effect waves-light btn" type='submit'>팀생성</button>

@@ -16,7 +16,7 @@ export default function page() {
       } else {
           setIsLogin(true);
       }
-  }, [isLogin]);    
+  }, []);    
 
     return (
         <div>

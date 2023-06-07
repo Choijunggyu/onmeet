@@ -9,3 +9,7 @@ export async function InsertUser(data){
 export async function InsertTeam(data){
     InsertTeamData(data.name, data.leaderId, data.type, data.goal)
 }
+
+export async function InsertMember(data){
+    InsertMemberData(data)
+}

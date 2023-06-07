@@ -32,6 +32,7 @@ model Team {
   leaderId String
   team_type String
   team_goal String
+  member_check Boolean @default(false)
   createtime DateTime @default(now())
   member Member[]
 }
@@ -42,6 +43,7 @@ model Member{
   uid String
   team Team @relation(fields: [tid], references: [team_id])
   tid Int
+  check Boolean @default(false)
   current Boolean @default(true)
   createtime DateTime @default(now())
 }

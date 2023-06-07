@@ -1,10 +1,12 @@
 'use client'
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { useRouter } from "next/navigation";
 
 export default function Login(props) {
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
+  const router = useRouter();
 
   function comData(event) {
     event.preventDefault();
@@ -18,6 +20,7 @@ export default function Login(props) {
         found = true;
         if (data[i].password === pw) {
           window.alert(`로그인 성공`);
+          router.push('/');
         } else {
           window.alert(`비밀번호가 일치하지 않습니다. 다시 입력해주세요`);
         }
