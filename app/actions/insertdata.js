@@ -18,13 +18,14 @@ export default async function InsertUserData(id, password,name, email, major, sc
     }
 }
 
-export async function InsertTeamData(name, leaderId, team_type){
+export async function InsertTeamData(name, leaderId, team_type,team_goal){
     try{
         await prisma.Team.create({
             data: {
                 name,
                 leaderId,
-                team_type
+                team_type,
+                team_goal
             }
         })
     } catch(error){
