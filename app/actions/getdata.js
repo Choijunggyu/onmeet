@@ -20,3 +20,12 @@ export async function GetTeamData(){
         console.log(error)
     }
 }
+
+export async function GetMemberData(){
+    try{
+        const members = await prisma.Member.findMany()
+        return members
+    } catch(error){
+        console.log(error)
+    }
+}
