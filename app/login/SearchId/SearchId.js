@@ -20,6 +20,7 @@ export default function SearchId(props){
             if(data.email === email){
                 window.alert(`해당유저의 아이디는 "${data.id}"입니다`)
                 noUser += 1
+                history.go(-1);
             }
         })
 

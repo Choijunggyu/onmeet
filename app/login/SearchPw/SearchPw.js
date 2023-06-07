@@ -22,6 +22,7 @@ export default function SearchPw(props){
             if(data.id === id && data.email == email){
                 window.alert(`해당유저의 비밀번호는 "${data.password}"입니다`)
                 noUser += 1
+                history.go(-1);
             }
         })
 

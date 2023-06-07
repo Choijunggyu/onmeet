@@ -1,5 +1,4 @@
 import { Inter } from 'next/font/google'
-import SideNav from '../sidenav'
 
 const inter = Inter({ subsets: ['latin'] })
 
