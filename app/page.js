@@ -2,12 +2,16 @@
 import './materialize.css'
 import Link from 'next/link';
 import TopNav from './topnav';
+import { useRouter } from "next/navigation";
  
 export default function Home() {
+  const router = useRouter();
   return (
     <div>
       <TopNav/>
-      <h1 className="center-align mexavas-text-white">OnMeet 홈페이지 개발 중..!</h1>
+      { sessionStorage.getItem("id") !== null 
+              ? router.push('./MyPage')
+              : router.push('./login')}
     </div>
     
   )
