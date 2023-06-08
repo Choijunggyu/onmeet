@@ -1,10 +1,9 @@
 'use client'    
-import './../../materialize.css'
 import TopNav from './../../topnav';
 import React, { useState, useEffect } from "react";
 import { InsertUser } from './../../actions/Insert';
 import { useRouter, redirect} from "next/navigation";
-import Image from 'next/image';
+
 
 export default function SignUp() {
     const [data, setData] = useState({
@@ -54,7 +53,7 @@ export default function SignUp() {
 
     useEffect(() => {
         if (isSignupSuccess) {
-            redirect ('./../../users');
+            redirect ('./../../../login');
         }
     }, [isSignupSuccess]);
 
@@ -64,36 +63,35 @@ export default function SignUp() {
     };
 
     return (
-        <div>
-            <TopNav />
-            <h1 className="center-align mexavas-text-white mexavas-div">네, 가입하세요</h1>
-            <div className="  container section  col s12">
-                <span>         <Image
-      src="/public/onmeet1.png"
-      width={400}
-      height={400}
-      alt="Picture of the author"
-    />
-          </span><span> <form className="row" onSubmit={handleSubmit} id="register">
-                    <input className="mexavas-text-white  col s12 " placeholder='ID 입력해주세요' type="text" name="id" id="id" />
-                    <input className="mexavas-text-white  col s12 " placeholder='PW 입력해주세요' type="password" name="password" id="password" />
-                    <input className="mexavas-text-white  col s12 " placeholder='이름 입력해주세요' type="text" name="name" id="name" />
-                    <input className="mexavas-text-white  col s12 " placeholder='이메일 입력해주세요' type="text" name="email" id="email" />
-                    <input className="mexavas-text-white  col s12 " placeholder='전공 입력해주세요' type="text" name="major" id="major" />
-                    <input className="mexavas-text-white  col s12 " placeholder='학교  입력해주세요' type="text" name="school" id="school" />
+        <>
+        <TopNav/>
+        <h2 className='center-align'>Sign up</h2>
+      <div className='row section'>
+           <form className="col s4 offset-s4" onSubmit={handleSubmit} id="register">
+                    <label htmlFor='id'>아이디:</label>
+                    <input type="text" name="id" id="id" />
+                    <label htmlFor='pw'>비밀번호:</label>
+                    <input type="password" name="password" id="password" />
+                    <label htmlFor='name'>이름:</label>
+                    <input type="text" name="name" id="name" />
+                    <label htmlFor='email'>이메일:</label>
+                    <input  type="text" name="email" id="email" />
+                    <label htmlFor='school'>대학교:</label>
+                    <input  type="text" name="school" id="school" />
+                    <label htmlFor='major'>전공:</label>
+                    <input  type="text" name="major" id="major" />
                     <select name="grade" className="browser-default col s12">
                         <option value="1">1학년</option>
                         <option value="2">2학년</option>
                         <option value="3">3학년</option>
                         <option value="4">4학년</option>
                     </select>
-                    <button className="mexavas-blue waves-effect waves-light btn col s12" type="submit">가입하세요</button>
+                    <button className="waves-effect waves-light btn" type="submit">가입하세요</button>
                     
-                </form></span>
+                </form>
+                </div>
                       
-      
-        </div>
-        </div>
+        </>
     );
 }
 

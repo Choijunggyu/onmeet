@@ -20,7 +20,7 @@ export default function Login(props) {
         found = true;
         if (data[i].password === pw) {
           window.alert(`로그인 성공`);
-          router.push('/');
+          router.push('./../MyPage');
         } else {
           window.alert(`비밀번호가 일치하지 않습니다. 다시 입력해주세요`);
         }

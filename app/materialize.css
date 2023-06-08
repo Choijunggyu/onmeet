@@ -3,6 +3,10 @@
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
+ 
+ h1 h2 h3 h4 h5 h6{
+  color: rgb(44, 199, 165)  !important;
+ }
 .mexavas-div{
   display:flex !important;
   justify-content:center !important;
@@ -10,6 +14,15 @@
  .mexavas-large-zize{
   font-size: large  !important;
  }
+ .mexavas-text-teal{
+  color: rgb(44, 199, 165)  !important;
+ }
+ .mexavas-text-green {
+  color: #98C379 !important;
+}
+.mexavas-text-yellow {
+  color:#e5c07b !important;
+}
  .mexavas-text-blue{
   color:#61AFEF   !important;
 
