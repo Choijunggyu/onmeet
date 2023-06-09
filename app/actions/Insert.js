@@ -7,7 +7,7 @@ export async function InsertUser(data){
 }
 
 export async function InsertTeam(data){
-    InsertTeamData(data.name, data.leaderId, data.type, data.goal)
+    InsertTeamData(data.name, data.leaderId, data.type, data.goal,data.check)
 }
 
 export async function InsertMember(data){

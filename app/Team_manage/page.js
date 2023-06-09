@@ -1,10 +1,15 @@
 import '../materialize.css'
 import SideNav from '../sideNav'
 import TopNav from '../topnav'
-import TeamRegister from './TeamRegister'
+import TeamManage from './TeamManage'
+import {GetMemberData, GetTeamData} from '../actions/getdata'
 
 
-export default function page(){
+export default async function page(){
+
+    const Teamdata = await GetTeamData()
+    const Memberdata = await GetMemberData()
+
     return(
         <>
         <TopNav/>
@@ -13,7 +18,7 @@ export default function page(){
                 <SideNav/>
             </div>
             <div className='col s9'>
-                <TeamRegister/>
+                <TeamManage teamdata = {Teamdata} memberdata = {Memberdata}/>
             </div>
         </div>
         </>

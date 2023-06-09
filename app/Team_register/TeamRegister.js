@@ -27,12 +27,13 @@ export default function TeamRegister(){
         InsertTeam(data)
         if(data.leaderId !== null){
             window.alert('팀생성 완료')
-        }   
+        }
+        console.log(data)
     },[data])
 
     return(
         <div className="container section inpur-field">
-            <h3>팀 생성</h3>
+            <h3 className="center-align mexavas-text-teal">팀 생성</h3>
             <form className="row" onSubmit={handleSubmit}>
                 <label htmlFor="name">팀이름을 입력해주세요</label>
                 <input className="mexavas-text-white" type='text' name='name' id="name"/>
