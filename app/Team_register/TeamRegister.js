@@ -32,8 +32,10 @@ export default function TeamRegister(){
     },[data])
 
     return(
+        <>
+        <h3 className="center-align mexavas-text-teal">팀 생성</h3>
+        <div className="divider"></div>
         <div className="container section inpur-field">
-            <h3 className="center-align mexavas-text-teal">팀 생성</h3>
             <form className="row" onSubmit={handleSubmit}>
                 <label htmlFor="name">팀이름을 입력해주세요</label>
                 <input className="mexavas-text-white" type='text' name='name' id="name"/>
@@ -55,5 +57,6 @@ export default function TeamRegister(){
                 <button className="mexavas-blue waves-effect waves-light btn" type='submit'>팀생성</button>
             </form>
         </div>
+        </>
     )
 }

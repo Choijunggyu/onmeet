@@ -12,7 +12,7 @@ export default function page(){
             <div className='col s2 offset'>
                 <SideNav/>
             </div>
-            <div className='col s9'>
+            <div className='col s10'>
                 <TeamRegister/>
             </div>
         </div>
