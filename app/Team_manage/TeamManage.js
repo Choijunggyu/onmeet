@@ -16,7 +16,6 @@ export default function TeamManage(props){
         console.log(rightdiv)
     },[rightdiv])
 
-
     return(
         <>
             <h3 className="center-align ">팀 관리</h3>

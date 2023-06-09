@@ -53,3 +53,18 @@ export async function InsertMemberData(uid, tid){
         console.log(error)
     }
 }
+
+export async function MemberAgree(mid){
+    try{
+        await prisma.Member.update({
+            where: {
+               id: mid 
+            },
+            data: {
+                check: true
+            }
+        })
+    } catch(error){
+        console.log(error)
+    }
+}
