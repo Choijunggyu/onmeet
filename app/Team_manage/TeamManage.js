@@ -12,11 +12,6 @@ export default function TeamManage(props){
 
     const [rightdiv, setRightdiv] = useState('null')
 
-    // const rightdivchange = (getvalue) =>{
-    //     changevalue = getvalue
-    //     setRightdiv(changevalue)
-    // }
-
 
     return(
         <>
