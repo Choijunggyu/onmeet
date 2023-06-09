@@ -1,5 +1,5 @@
 import '../materialize.css'
-import GetUserData from '../actions/getdata'
+import {GetUserData} from '../actions/getdata'
 import TopNav from '../topnav';
 import MyPage from './MyPage';
 
