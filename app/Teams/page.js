@@ -1,14 +1,24 @@
-'use client' //컴포넌트 사용할 때 작성
-import Link from 'next/link';
-import './../materialize.css'
-import TopNav from '../topnav';
+import '../materialize.css'
+import SideNav from '../sideNav'
+import TeamListUI from './TeamListUI'
+import {GetTeamData} from '../actions/getdata'
 
-export default function SignUp() {
-  return (
-    <div>
-      <TopNav/>
-     <h1 className="center-align mexavas-text-white">OnMeet 팀체팅 페이지 개발 중..!</h1>
-    </div>
-    
-  )
+
+export default async function page(){
+
+    const Teamdata = await GetTeamData()
+
+    return(
+        <>
+        <div className='row'>
+            <div className='col s3'>
+                <SideNav/>
+            </div>
+            <div className='col s9'>
+                <TeamListUI teamdata = {Teamdata}/>
+                </div>
+                </div>
+
+        </>
+    )
 }
