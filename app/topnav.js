@@ -13,7 +13,7 @@ export default function TopNav() {
             <Link className="mexavas-text-white mexavas-large-zize "href="/">홈페이지</Link> 
             </li>
             <li>
-            <Link  className="mexavas-text-white mexavas-large-zize "href="/Teams">팀채팅</Link>
+            <Link  className="mexavas-text-white mexavas-large-zize "href="/Team_list">팀 게시판</Link>
             </li>
             <li>
               { sessionStorage.getItem("id") !== null 
