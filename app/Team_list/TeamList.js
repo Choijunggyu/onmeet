@@ -1,34 +1,55 @@
+import '../materialize.css'
+
 export default function TeamList(props) {
 
     const teamdata = props.teamdata;
+    const sortTeam = teamdata.sort((a, b) => b.createtime - a.createtime);
        
     return (
         <>
             <div className='row'>
                 <h3 className='center-align'>팀 게시판</h3>
                 <div className="divider"></div>
-                <div className='row'>
+                <br></br>
+                    <table className='centered'>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>팀명</th>
+                                <th>팀장 아이디</th>
+                                <th>팀 유형</th>
+                                <th>생성시간</th>
+                                {/* <th>인원 수</th> */}
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
                     {
-                        teamdata.map((team) => {
+                        sortTeam.map((team, i) => {
                             const createTimeString = team.createtime.toLocaleString();
                             return (
-                                <div className="col s12 m3" key={team.team_id}>
-                                    <div className="card grey lighten-3">
-                                        <div className="card-content">
-                                            <span className="card-title">{team.name}</span>
-                                            <p>{team.team_type}</p>
-                                            <p>{team.leaderId}</p>
-                                            <p>{createTimeString}</p>
-                                        </div>
-                                        <div className="card-action">
-                                            <a href="./../상세내용" className='blue-text'>자세히 보기</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                    <tr key = {team.team_id}>
+                                        <td>{i+1}</td>
+                                        <td>{team.name}</td>
+                                        <td>{team.leaderId}</td>
+                                        <td>{team.team_type}</td>
+                                        <td>{createTimeString}</td>
+                                        {/* <td></td> */}
+                                        <td><button className='mexavas-blue waves-effect waves-light btn'>자세히 보기</button></td>
+                                    </tr>              
                             )
-                        }   
-                    )}
-                </div>
+                        })
+                    }
+                    </tbody>
+                    </table>
+                    <br></br>
+                    <ul class="pagination center">
+                        <li class="active blue"><a href="#!">1</a></li>
+                        <li class="waves-effect"><a href="#!">2</a></li>
+                        <li class="waves-effect"><a href="#!">3</a></li>
+                        <li class="waves-effect"><a href="#!">4</a></li>
+                        <li class="waves-effect"><a href="#!">5</a></li>
+                    </ul>
             </div>
         </>
     );
