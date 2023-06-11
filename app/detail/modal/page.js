@@ -1,4 +1,4 @@
-import GetUserData from '@/app/actions/getdata'
+// import GetUserData from '@/app/actions/getdata'
 import ApplyModal from './ApplyModal'
 
 export default async function Page(){
