@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import TeamSelect from "./TeamSelect"
 import MemberManage from "./MemberManage"
 
@@ -11,10 +11,6 @@ export default function TeamManage(props){
     const userdata = props.userdata
 
     const [rightdiv, setRightdiv] = useState('null')
-
-    useEffect(()=>{
-        console.log(rightdiv)
-    },[rightdiv])
 
     return(
         <>
@@ -28,7 +24,6 @@ export default function TeamManage(props){
                     <MemberManage teamid={rightdiv} memberdata={memberdata} userdata={userdata}/>
                 </div>
             </div>
-            
         </>
     )
 }

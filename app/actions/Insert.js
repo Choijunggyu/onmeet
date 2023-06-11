@@ -11,5 +11,5 @@ export async function InsertTeam(data){
 }
 
 export async function InsertMember(data){
-    InsertMemberData(data.uid, data.tid)
+    InsertMemberData(data.uid, data.tid, data.check)
 }

@@ -41,12 +41,13 @@ export async function InsertTeamData(name, leaderId, team_type,team_goal,member_
     }
 }
 
-export async function InsertMemberData(uid, tid){
+export async function InsertMemberData(uid, tid ,check){
     try{
         await prisma.Member.create({
             data: {
                 uid,
-                tid
+                tid,
+                check
             }
         })
     } catch(error){

@@ -2,13 +2,30 @@
 
 import { useState } from 'react';
 import MemberManage from '@/app/Team_manage/MemberManage';
+import { InsertMember } from '@/app/actions/Insert';
 
 export default function ApplyModal({ isModalOpen, setIsModalOpen }) {
+
+  //props에서 값만 받아오면 됨
+  const [data, setData] = useState({
+    uid : sessionStorage.getItem("id"),
+    tid : teamdata.id,
+    check : teamdata.member_check ? false : true
+  })
+  // const data = {
+  //   uid : 'qqq',
+  //   tid : 15,
+  //   check : false
+  // }
+  // 테스트 데이터 성공
+
   const closeModal = () => { //모달 종료
     setIsModalOpen(false);
   };
-  const submit =() => { //사용자 정보 팀장에게 전달, 마지막에 closeModal 호출
-    
+  const submit = () => { //사용자 정보 팀장에게 전달, 마지막에 closeModal 호출 팀테이블 필요
+    InsertMember(data)
+    window.alert("신청이 완료되었습니다")
+    closeModal()
   }
 
   return (
