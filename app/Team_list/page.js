@@ -1,5 +1,5 @@
 import '../materialize.css'
-import { GetTeamData } from '../actions/getdata'
+import { GetTeamData, GetMemberData, GetUserData } from '../actions/getdata'
 import SideNav from '../sideNav'
 import TopNav from '../topnav';
 import TeamList from './TeamList';
@@ -7,6 +7,9 @@ import TeamList from './TeamList';
 export default async function page() {
 
     const teamdata = await GetTeamData()
+    const memberdata = await GetMemberData()
+    const userdata = await GetUserData()
+
 
     return (
         <>
@@ -16,7 +19,7 @@ export default async function page() {
                     <SideNav/>
                 </div>
                 <div className='col s9'>
-                    <TeamList teamdata = {teamdata} />
+                    <TeamList teamdata = {teamdata} userdata = {userdata} memberdata = {memberdata} />
                 </div>
             </div>
         </>

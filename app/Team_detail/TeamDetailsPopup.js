@@ -1,6 +1,7 @@
 import React from 'react';
+import ModalButton from '../detail/page';
 
-export default function TeamDetailsPopup({ team, onClose }) {
+export default function TeamDetailsPopup({ team, onClose, user, member}) {
   // Render the team details here
   return (
     <div className="team-details-popup">
@@ -9,7 +10,9 @@ export default function TeamDetailsPopup({ team, onClose }) {
       </button>
       <h3>{team.name}</h3>
       <p>팀장 아이디: {team.leaderId}</p>
-      {/* Render other details as needed */}
+      <div>
+        <ModalButton team = {team}/>
+      </div>
     </div>
   );
 }

@@ -3,20 +3,13 @@
 import { useState } from 'react';
 import { InsertMember } from '@/app/actions/Insert';
 
-export default function Modal({ isModalOpen, setIsModalOpen }) {
+export default function Modal({ isModalOpen, setIsModalOpen , team}) {
 
-  //props에서 db팀데이터 값만 받아오면 됨
-  // const [data, setData] = useState({
-  //   uid : sessionStorage.getItem("id"),
-  //   tid : teamdata.id,
-  //   check : teamdata.member_check ? false : true
-  // })
-  const data = {
-    uid : 'eee',
-    tid : 15,
-    check : false
-  }
-  // 테스트 데이터 성공
+  const [data, setData] = useState({
+    uid : sessionStorage.getItem("id"),
+    tid : team.team_id,
+    check : team.member_check ? false : true
+  })
 
   const closeModal = () => { //모달 종료
     setIsModalOpen(false);

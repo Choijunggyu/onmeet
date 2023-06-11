@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import TeamDetailsPopup from '../Team_Detail/TeamDetailsPopup';
+import TeamDetailsPopup from '../Team_detail/TeamDetailsPopup';
 
 export default function TeamList(props) {
   const [selectedTeam, setSelectedTeam] = useState(null);
@@ -48,8 +48,8 @@ export default function TeamList(props) {
                                         {/* <td></td> */}
                                         <td>
                                         <button className='mexavas-blue waves-effect waves-light btn' onClick={() => handleTeamClick(team)} >
-                    자세히 보기
-                  </button>
+                                            자세히 보기
+                                        </button>
                                         </td>
                                     </tr>              
                             )
@@ -58,19 +58,11 @@ export default function TeamList(props) {
                     </tbody>
                     </table>
                     <br></br>
-                    <ul class="pagination center">
-                        <li class="active blue"><a href="#!">1</a></li>
-                        <li class="waves-effect"><a href="#!">2</a></li>
-                        <li class="waves-effect"><a href="#!">3</a></li>
-                        <li class="waves-effect"><a href="#!">4</a></li>
-                        <li class="waves-effect"><a href="#!">5</a></li>
-                    </ul>
-
                     {selectedTeam && (
-        <div className="team-details-popup-container">
-          <TeamDetailsPopup team={selectedTeam} onClose={handleClosePopup} />
-        </div>
-      )}
+                    <div className="team-details-popup-container">
+                        <TeamDetailsPopup team={selectedTeam} user = {props.userdata} member = {props.memberdata} onClose={handleClosePopup} />
+                     </div>
+                    )}
             </div>
         </>
     );
