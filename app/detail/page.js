@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Modal from './modal/ApplyModal';
 
 export default function ParentComponent(){
-    const [isModalOpen, setIsModalOpen] = useState(true);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = () => {
             setIsModalOpen(true);
