@@ -47,8 +47,8 @@ export default function Modal({ isModalOpen, setIsModalOpen , team}) {
 
         .modal-body {
           position: absolute;
-          top: 50%;
-          left: 50%;
+          top: 30%;
+          left: 30%;
         
           width: 300px;
           height: 250px;
