@@ -1,10 +1,21 @@
-import '../materialize.css'
+'use client'
+import React, { useState } from 'react';
+import TeamDetailsPopup from '../Team_Detail/TeamDetailsPopup';
 
 export default function TeamList(props) {
+  const [selectedTeam, setSelectedTeam] = useState(null);
 
-    const teamdata = props.teamdata;
-    const sortTeam = teamdata.sort((a, b) => b.createtime - a.createtime);
-       
+  const teamdata = props.teamdata;
+  const sortTeam = teamdata.sort((a, b) => b.createtime - a.createtime);
+
+  const handleTeamClick = (team) => {
+    setSelectedTeam(team);
+  };
+
+  const handleClosePopup = () => {
+    setSelectedTeam(null);
+  };
+
     return (
         <>
             <div className='row'>
@@ -35,7 +46,11 @@ export default function TeamList(props) {
                                         <td>{team.team_type}</td>
                                         <td>{createTimeString}</td>
                                         {/* <td></td> */}
-                                        <td><button className='mexavas-blue waves-effect waves-light btn'>자세히 보기</button></td>
+                                        <td>
+                                        <button className='mexavas-blue waves-effect waves-light btn' onClick={() => handleTeamClick(team)} >
+                    자세히 보기
+                  </button>
+                                        </td>
                                     </tr>              
                             )
                         })
@@ -50,6 +65,12 @@ export default function TeamList(props) {
                         <li class="waves-effect"><a href="#!">4</a></li>
                         <li class="waves-effect"><a href="#!">5</a></li>
                     </ul>
+
+                    {selectedTeam && (
+        <div className="team-details-popup-container">
+          <TeamDetailsPopup team={selectedTeam} onClose={handleClosePopup} />
+        </div>
+      )}
             </div>
         </>
     );
