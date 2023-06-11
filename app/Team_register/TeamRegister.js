@@ -48,7 +48,7 @@ export default function TeamRegister(){
                 <p>
                     <label>
                         <input type="checkbox" name="check" value={true}/>
-                        <span>신청검사여부</span>
+                        <span>신청검사여부 *체크시 신청인원들을 검사합니다</span>
                     </label>
                 </p>
                 <label htmlFor="goal">팀목표와 간단한 소개를 입력해주세요</label>

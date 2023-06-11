@@ -30,7 +30,6 @@ export default function TeamList(props) {
                                 <th>팀장 아이디</th>
                                 <th>팀 유형</th>
                                 <th>생성시간</th>
-                                {/* <th>인원 수</th> */}
                                 <th></th>
                             </tr>
                         </thead>
@@ -45,7 +44,6 @@ export default function TeamList(props) {
                                         <td>{team.leaderId}</td>
                                         <td>{team.team_type}</td>
                                         <td>{createTimeString}</td>
-                                        {/* <td></td> */}
                                         <td>
                                         <button className='mexavas-blue waves-effect waves-light btn' onClick={() => handleTeamClick(team)} >
                                             자세히 보기

@@ -11,10 +11,10 @@ export default function Modal({ isModalOpen, setIsModalOpen , team}) {
     check : team.member_check ? false : true
   })
 
-  const closeModal = () => { //모달 종료
+  const closeModal = () => {
     setIsModalOpen(false);
   };
-  const submit = () => { //사용자 정보 팀장에게 전달, 마지막에 closeModal 호출 팀테이블 필요
+  const submit = () => {
     InsertMember(data)
     window.alert("신청이 완료되었습니다")
     closeModal()

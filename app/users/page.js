@@ -1,4 +1,4 @@
-'use client' //컴포넌트 사용할 때 작성
+'use client'
 import Link from 'next/link';
 import './../materialize.css'
 import TopNav from './../topnav';

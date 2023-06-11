@@ -2,34 +2,7 @@ import { useEffect } from 'react';
 import ModalButton from '../detail/page';
 
 export default function TeamDetailsPopup({ team, onClose, user, member}) {
-  // Render the team details here
-
-  // let getTeamMember = []
-  // let Mid = []
-  // const getUid = (member, team) => {
-  //   member.map((member)=>{
-  //     if(member.tid === team.team_id && member.check === true){
-  //       Mid.push(member.uid)
-  //     }
-  //   })
-  // }
-
-  // const getValue = (Mid, user) => {
-  //   Mid.map((Mid)=>{
-  //     user.map((user)=>{
-  //       if(Mid === user.id){
-  //         getTeamMember.push(user)
-  //       }
-  //     })
-  //   })
-  // }
-
-  // useEffect(()=>{
-  //   getUid(member, team)
-  //   getValue(Mid,user)
-  //   console.log(getTeamMember)
-  // },[])
-
+  
   return (
     <div className="team-details-popup">
       <button className="close-button" onClick={onClose}>
