@@ -1,22 +1,21 @@
 'use client'
 
 import { useState } from 'react';
-import MemberManage from '@/app/Team_manage/MemberManage';
 import { InsertMember } from '@/app/actions/Insert';
 
-export default function ApplyModal({ isModalOpen, setIsModalOpen }) {
+export default function Modal({ isModalOpen, setIsModalOpen }) {
 
-  //props에서 값만 받아오면 됨
-  const [data, setData] = useState({
-    uid : sessionStorage.getItem("id"),
-    tid : teamdata.id,
-    check : teamdata.member_check ? false : true
-  })
-  // const data = {
-  //   uid : 'qqq',
-  //   tid : 15,
-  //   check : false
-  // }
+  //props에서 db팀데이터 값만 받아오면 됨
+  // const [data, setData] = useState({
+  //   uid : sessionStorage.getItem("id"),
+  //   tid : teamdata.id,
+  //   check : teamdata.member_check ? false : true
+  // })
+  const data = {
+    uid : 'eee',
+    tid : 15,
+    check : false
+  }
   // 테스트 데이터 성공
 
   const closeModal = () => { //모달 종료
@@ -34,8 +33,8 @@ export default function ApplyModal({ isModalOpen, setIsModalOpen }) {
         <div className="modal">
           <div className="modal-body">
             <h2>이 팀으로 신청하시겠습니까?</h2>
-            <button onClick={submit}>확인</button>
-            <button onClick={closeModal}>취소</button>
+            <button className='mexavas-blue waves-effect waves-light btn' onClick={submit}>확인</button>
+            <button className='mexavas-blue waves-effect waves-light btn' onClick={closeModal}>취소</button>
           </div>
         </div>
       )}

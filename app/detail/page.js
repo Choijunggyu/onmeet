@@ -13,7 +13,7 @@ export default function ParentComponent(){
     
     return(
         <div>
-            <button onClick={openModal}>신청하기</button>
+            <button className='mexavas-blue waves-effect waves-light btn' onClick={openModal}>신청하기</button>
             <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
         </div>
 
