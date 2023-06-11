@@ -13,6 +13,6 @@ export default function Home() {
               ? router.push('./MyPage')
               : router.push('./login')}
     </div>
-    
+
   )
 }
