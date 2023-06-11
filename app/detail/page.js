@@ -4,7 +4,7 @@ import '../materialize.css'
 import { useState } from 'react';
 import Modal from './modal/ApplyModal';
 
-export default async function ParentComponent(){
+export default function ParentComponent(){
     const [isModalOpen, setIsModalOpen] = useState(true);
 
     const openModal = () => {
@@ -15,9 +15,7 @@ export default async function ParentComponent(){
         <div>
             <button onClick={openModal}>신청하기</button>
             <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
-
         </div>
 
     )
 }
-

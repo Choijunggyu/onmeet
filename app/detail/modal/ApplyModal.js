@@ -8,10 +8,6 @@ export default function ApplyModal({ isModalOpen, setIsModalOpen }) {
     setIsModalOpen(false);
   };
   const submit =() => { //사용자 정보 팀장에게 전달, 마지막에 closeModal 호출
-    <>
-        <MemberManage/>
-        <closeModal/>
-    </>
     
   }
 

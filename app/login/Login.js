@@ -11,9 +11,8 @@ export default function Login(props) {
   function comData(event) {
     event.preventDefault();
 
-    const data = props.data; //가져온 props user db데이터  data.id 유저id data.password 유저비밀번호
+    const data = props.data;
 
-    // 로그인 처리
     let found = false;
     for (let i = 0; i < data.length; i++) {
       if (data[i].id === id) {
@@ -32,12 +31,9 @@ export default function Login(props) {
       window.alert(`아이디가 일치하지 않습니다. 다시 입력해주세요.`);
     }
       
-
-    //로그인 성공한 경우 세션 스토리지에 정보 저장
     sessionStorage.setItem('id', id);
     sessionStorage.setItem('password', pw);
 
-    //페이지 이동..?
   }
 
   return (

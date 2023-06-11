@@ -66,7 +66,7 @@ export default function SignUp() {
         <>
         <TopNav/>
         <h2 className='center-align'>Sign up</h2>
-      <div className='row section'>
+        <div className='row section'>
            <form className="col s4 offset-s4" onSubmit={handleSubmit} id="register">
                     <label htmlFor='id'>아이디:</label>
                     <input type="text" name="id" id="id" />

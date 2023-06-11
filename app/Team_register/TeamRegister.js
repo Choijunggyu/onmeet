@@ -24,11 +24,10 @@ export default function TeamRegister(){
     }
 
     useEffect(()=>{
-        InsertTeam(data)
         if(data.leaderId !== null){
+            InsertTeam(data)
             window.alert('팀생성 완료')
         }
-        console.log(data)
     },[data])
 
     return(
@@ -41,10 +40,10 @@ export default function TeamRegister(){
                 <input className="mexavas-text-white" type='text' name='name' id="name"/>
                 <label htmlFor="type">팀유형을 설정해주세요</label>
                 <select name="type" id="type" className="browser-default">
-                    <option value="1">type1</option>
-                    <option value="2">type2</option>
-                    <option value="3">type3</option>    
-                    <option value="3">type4</option>
+                    <option value="포트폴리오">포트폴리오</option>
+                    <option value="공모전">공모전</option>
+                    <option value="대외활동">대외활동</option>    
+                    <option value="동아리">동아리</option>
                 </select><br/>
                 <p>
                     <label>
