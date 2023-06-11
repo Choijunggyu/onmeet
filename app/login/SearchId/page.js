@@ -1,7 +1,7 @@
 import '../../materialize.css'
 import SearchId from './SearchId';
 import TopNav from '../../topnav';
-import GetUserData from '../../actions/getdata';
+import { GetUserData } from '@/app/actions/getdata';
 
 export default async function page(){
 
